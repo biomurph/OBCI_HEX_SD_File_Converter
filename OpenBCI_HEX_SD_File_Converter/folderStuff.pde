@@ -17,7 +17,7 @@ void folderSelected(File selection) {
 void createFile(){
    logFileName = "OBCI_data/"+month()+"_"+day()+"_"+hour()+"_"+minute()+".csv";
    dataWriter = createWriter(logFileName);
-   dataWriter.println("*OBCI Data Log " + month()+"/"+day()+" "+hour()+":"+minute());
+   dataWriter.println("%OBCI Data Log " + month()+"/"+day()+" "+hour()+":"+minute());
 }
 
 
