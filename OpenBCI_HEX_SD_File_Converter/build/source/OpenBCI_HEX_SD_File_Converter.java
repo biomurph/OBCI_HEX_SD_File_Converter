@@ -1,25 +1,25 @@
-import processing.core.*; 
-import processing.data.*; 
-import processing.event.*; 
-import processing.opengl.*; 
+import processing.core.*;
+import processing.data.*;
+import processing.event.*;
+import processing.opengl.*;
 
-import java.util.HashMap; 
-import java.util.ArrayList; 
-import java.io.File; 
-import java.io.BufferedReader; 
-import java.io.PrintWriter; 
-import java.io.InputStream; 
-import java.io.OutputStream; 
-import java.io.IOException; 
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
 
 public class OpenBCI_HEX_SD_File_Converter extends PApplet {
 
 /**
- * Trying to convert OBCI data from HEX to DECIMAL
+ * Convert OpenBCI data stored on SD card from HEX to DECIMAL
  * Started with the Button example, added scratch from other examples.
- * Relies heavily on the OpenBCI Processing GUI by Chip Audette (link)
+ * Relies heavily on the OpenBCI Processing GUI by Chip Audette
  *
- * This will successfully prompt to open file on button press
+ * This program will prompt you to open file on button press
  * also creates file folder and time-stamp new data file
  *
  *
@@ -42,12 +42,18 @@ String convertedLine;
 String thisLine;
 String h;
 float[] floatData = new float[20];
+<<<<<<< HEAD
 int[] intData = new int[20];
+=======
+>>>>>>> origin/master
 String[] hexNums;
 String logFileName;
 long thisTime;
 long thatTime;
+<<<<<<< HEAD
 boolean printNextLine = false;
+=======
+>>>>>>> origin/master
 
 int buttonX, buttonY;      // Position of square button
 float buttonHeight = 60;     // height of button
@@ -58,7 +64,7 @@ boolean overButton = false;
 boolean reading = false;
 
 public void setup() {
-  
+
   font = createFont("Dialog", 24);
   textFont(font);
   textAlign(CENTER);
@@ -101,16 +107,22 @@ public void draw() {
         //          println(dataLine);
         dataWriter.println(dataLine);
         println(dataLine);
+<<<<<<< HEAD
         printNextLine = true;
+=======
+>>>>>>> origin/master
       } else {
         if (hexNums.length < 13){
           convert8channelLine();
         }else{
           convert16channelLine();
         }
+<<<<<<< HEAD
         if(printNextLine){
           printNextLine = false;
         }
+=======
+>>>>>>> origin/master
       }
     }
   }
@@ -119,6 +131,7 @@ public void draw() {
 
 
 public void convert16channelLine() {
+<<<<<<< HEAD
   if(printNextLine){
     for(int i=0; i<hexNums.length; i++){
       h = hexNums[i];
@@ -138,6 +151,8 @@ public void convert16channelLine() {
     println();
     return;
   }
+=======
+>>>>>>> origin/master
   for (int i=0; i<hexNums.length; i++) {
     h = hexNums[i];
     if (i > 0) {
@@ -180,6 +195,7 @@ public void convert16channelLine() {
 }
 
 public void convert8channelLine() {
+<<<<<<< HEAD
   if(printNextLine){
     for(int i=0; i<hexNums.length; i++){
       h = hexNums[i];
@@ -199,6 +215,8 @@ public void convert8channelLine() {
     println();
     return;
   }
+=======
+>>>>>>> origin/master
   for (int i=0; i<hexNums.length; i++) {
     h = hexNums[i];
     if (i > 0) {
@@ -288,7 +306,7 @@ public void updateButton() {
 }
 
 public boolean buttonOver(int x, int y, float w, float h)  {
-  if (mouseX >= x-w/2 && mouseX <= x+w/2 && 
+  if (mouseX >= x-w/2 && mouseX <= x+w/2 &&
       mouseY >= y-h/2 && mouseY <= y+h/2) {
     return true;
   } else {

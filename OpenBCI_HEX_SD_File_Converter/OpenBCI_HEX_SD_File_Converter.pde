@@ -1,9 +1,9 @@
 /**
- * Trying to convert OBCI data from HEX to DECIMAL
+ * Convert OpenBCI data stored on SD card from HEX to DECIMAL
  * Started with the Button example, added scratch from other examples.
- * Relies heavily on the OpenBCI Processing GUI by Chip Audette (link)
+ * Relies heavily on the OpenBCI Processing GUI by Chip Audette
  *
- * This will successfully prompt to open file on button press
+ * This program will prompt you to open file on button press
  * also creates file folder and time-stamp new data file
  *
  *
