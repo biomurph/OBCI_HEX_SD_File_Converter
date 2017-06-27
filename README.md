@@ -1,4 +1,7 @@
-OBCI_HEX_SD_File_Converter
-==========================
+# OpenBCI SD File Converter
 
-Processing sketch to convert OpenBCI generated HEX files to Decimal
+
+Processing sketch to convert OpenBCI generated files written to microSD card from HEX to Decimal. Written in Processing. [www.processing.org](www.processing.org)
+
+
+### Follow the prompt to select a file. The result will be saved in the `OBCI_Data` folder inside the sketch folder.
